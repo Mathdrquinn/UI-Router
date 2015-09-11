@@ -1,0 +1,18 @@
+<div class="row padded">
+    <div class="list-group column small-3">
+      <ul>
+        <li class="list-group-item"
+            ng-repeat="person in family">
+          <a  class="scoped"
+              ng-class="{active: person.selected}"
+              ng-href="#/family/{{$index}}"
+              ng-click="selectPerson(person)">{{person.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <div ui-view="right" class="column small-9"></div>
+
+</div>
+<div class="row padded">
+  <div ui-view="bottom" class="column small-12"></div>
+</div>
